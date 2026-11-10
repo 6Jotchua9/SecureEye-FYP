@@ -1,0 +1,846 @@
+/* ============================================================================
+   CiNQ design tokens · variables.css · GENERATED from foundations/tokens.json
+   by tooling/tokens/build.js. Do not edit; edit tokens.json and run
+   `npm run tokens:build`.
+
+   Modes: :root is dark (the brand). html.light is the opt-in light mode.
+   html.contrast raises text and line contrast for people who need it.
+   Density: [data-density="compact" | "dense" | "touch"]; comfortable is the
+   default. Legacy names from design system 1.0.0 and the website are kept
+   as aliases at the end of :root.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+  --color-ink-1: #0c0b0a;
+  --color-ink-2: #141311;
+  --color-ink-3: #1d1b18;
+  --color-ink-4: #2a2723;
+  --color-ink-warm: #1a1410;
+  --color-ink-deep: #080807;
+  --color-bone-1: #f3efe7;
+  --color-bone-2: #aca69b;
+  --color-bone-3: #6f6a62;
+  --color-paper-1: #efe9dd;
+  --color-paper-2: #e6dfd1;
+  --color-paper-3: #dcd4c4;
+  --color-paper-4: #c9c0ae;
+  --color-paper-warm: #efe3d3;
+  --color-paper-white: #ffffff;
+  --color-graphite-1: #14120f;
+  --color-graphite-2: #5a554d;
+  --color-graphite-3: #7a7368;
+  --color-neutral-50: #f7f4ee;
+  --color-neutral-100: #f3efe7;
+  --color-neutral-200: #e6dfd1;
+  --color-neutral-300: #cdc6b8;
+  --color-neutral-400: #aca69b;
+  --color-neutral-500: #857f74;
+  --color-neutral-600: #6f6a62;
+  --color-neutral-700: #5a554d;
+  --color-neutral-800: #2a2723;
+  --color-neutral-900: #1d1b18;
+  --color-neutral-925: #141311;
+  --color-neutral-950: #0c0b0a;
+  --color-vermilion-50: #fff1ec;
+  --color-vermilion-100: #ffdfd6;
+  --color-vermilion-200: #ffbfad;
+  --color-vermilion-300: #fa9b81;
+  --color-vermilion-400: #f07554;
+  --color-vermilion-500: #f9633a;
+  --color-vermilion-600: #e8521f;
+  --color-vermilion-700: #af2f02;
+  --color-vermilion-800: #892504;
+  --color-vermilion-900: #651b05;
+  --color-vermilion-950: #431104;
+  --color-vermilion-hover: #ff7c57;
+  --color-vermilion-paper: #ef5a2f;
+  --color-vermilion-paper-hover: #f97048;
+  --color-vermilion-text-paper: #9e2d0b;
+  --color-vermilion-deep: #c9330c;
+  --color-vermilion-active-paper: #dc4318;
+  --color-amber: #ffb020;
+  --color-rose-shader: #f53857;
+  --color-mint-400: #4fcf8e;
+  --color-mint-700: #14613b;
+  --color-gold-400: #f2c14e;
+  --color-gold-600: #a56f00;
+  --color-gold-700: #7a5600;
+  --color-rose-400: #ff5c7c;
+  --color-rose-700: #a51c35;
+  --color-sky-400: #7db3ff;
+  --color-sky-700: #174c9c;
+  --color-lilac-400: #c58bff;
+  --color-lilac-700: #7b3fd1;
+  --color-black: #000000;
+  --surface-canvas: #0c0b0a;
+  --surface-primary: #141311;
+  --surface-raised: #1d1b18;
+  --surface-overlay: #141311;
+  --surface-sunken: #080807;
+  --surface-input: #080807;
+  --surface-inverse: #f3efe7;
+  --surface-bezel: #2a2723;
+  --surface-warm: #1a1410;
+  --surface-device: #2a2723;
+  --surface-device-screen: #0c0b0a;
+  --surface-scrim: rgb(12 11 10 / 0.6);
+  --surface-footer: #0c0b0a;
+  --text-primary: #f3efe7;
+  --text-secondary: #aca69b;
+  --text-tertiary: #6f6a62;
+  --text-inverse: #0c0b0a;
+  --text-on-accent: #0c0b0a;
+  --text-on-footer: #f3efe7;
+  --text-on-footer-secondary: #aca69b;
+  --text-placeholder: #6f6a62;
+  --text-link: #f9633a;
+  --accent-fill: #f9633a;
+  --accent-hover: #ff7c57;
+  --accent-active: #e8521f;
+  --accent-deep: #c9330c;
+  --accent-text: #f9633a;
+  --accent-ring: #f9633a;
+  --accent-soft: color-mix(in srgb, #f9633a 10%, transparent);
+  --accent-wash: color-mix(in srgb, #f9633a 22%, transparent);
+  --line-hairline: color-mix(in srgb, #f3efe7 10%, transparent);
+  --line-standard: color-mix(in srgb, #f3efe7 18%, transparent);
+  --line-strong: color-mix(in srgb, #f3efe7 40%, transparent);
+  --line-selected: #f9633a;
+  --line-boundary: color-mix(in srgb, #f3efe7 45%, transparent);
+  --interaction-hover: color-mix(in srgb, #f3efe7 6%, transparent);
+  --interaction-pressed: color-mix(in srgb, #f3efe7 10%, transparent);
+  --interaction-selected: color-mix(in srgb, #f9633a 10%, transparent);
+  --interaction-focus: #f9633a;
+  --interaction-disabled-opacity: 0.4;
+  --feedback-success-solid: #4fcf8e;
+  --feedback-success-on-solid: #0c0b0a;
+  --feedback-success-text: #4fcf8e;
+  --feedback-success-icon: #4fcf8e;
+  --feedback-success-bg: color-mix(in srgb, #4fcf8e 14%, transparent);
+  --feedback-success-border: color-mix(in srgb, #4fcf8e 40%, transparent);
+  --feedback-warning-solid: #f2c14e;
+  --feedback-warning-on-solid: #0c0b0a;
+  --feedback-warning-text: #f2c14e;
+  --feedback-warning-icon: #f2c14e;
+  --feedback-warning-bg: color-mix(in srgb, #f2c14e 14%, transparent);
+  --feedback-warning-border: color-mix(in srgb, #f2c14e 40%, transparent);
+  --feedback-danger-solid: #ff5c7c;
+  --feedback-danger-on-solid: #0c0b0a;
+  --feedback-danger-text: #ff5c7c;
+  --feedback-danger-icon: #ff5c7c;
+  --feedback-danger-bg: color-mix(in srgb, #ff5c7c 14%, transparent);
+  --feedback-danger-border: color-mix(in srgb, #ff5c7c 40%, transparent);
+  --feedback-info-solid: #7db3ff;
+  --feedback-info-on-solid: #0c0b0a;
+  --feedback-info-text: #7db3ff;
+  --feedback-info-icon: #7db3ff;
+  --feedback-info-bg: color-mix(in srgb, #7db3ff 14%, transparent);
+  --feedback-info-border: color-mix(in srgb, #7db3ff 40%, transparent);
+  --chart-1: #f9633a;
+  --chart-2: #7db3ff;
+  --chart-3: #4fcf8e;
+  --chart-4: #f2c14e;
+  --chart-5: #c58bff;
+  --chart-6: #aca69b;
+  --chart-grid: color-mix(in srgb, #f3efe7 8%, transparent);
+  --chart-axis-text: #aca69b;
+  --footer-bg: #0c0b0a;
+  --footer-text: #f3efe7;
+  --footer-text-secondary: #aca69b;
+  --footer-line: rgb(243 239 231 / 0.1);
+  --footer-accent: #f9633a;
+  --font-display: var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono, 'Geist Mono'), ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-urdu: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+  --font-ios: 'Bricolage Grotesque', -apple-system, 'SF Pro Text', sans-serif;
+  --font-android: 'Bricolage Grotesque', Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-display: 700;
+  --font-weight-display-tight: 800;
+  --font-weight-light: 300;
+  --font-size-display-l: clamp(2.75rem, 6.6vw, 7.5rem);
+  --font-size-display-m: clamp(2.25rem, 5.2vw, 5.5rem);
+  --font-size-display-s: clamp(1.5rem, 2.6vw, 2.5rem);
+  --font-size-h1: clamp(1.75rem, 2.2vw, 2.25rem);
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-h4: 1.0625rem;
+  --font-size-h5: 0.9375rem;
+  --font-size-h6: 0.8125rem;
+  --font-size-body-l: clamp(1.0625rem, 1.35vw, 1.375rem);
+  --font-size-body: clamp(0.9375rem, 1.05vw, 1.0625rem);
+  --font-size-body-s: 0.8125rem;
+  --font-size-caption: 0.75rem;
+  --font-size-overline: 0.75rem;
+  --font-size-code: 0.875rem;
+  --font-size-badge: 0.6875rem;
+  --font-size-numeric: clamp(2rem, 3.4vw, 3.5rem);
+  --font-size-nav: 0.9375rem;
+  --font-size-bottom-nav: 0.6875rem;
+  --leading-display: 0.95;
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-lead: 1.45;
+  --leading-body: 1.6;
+  --leading-single: 1;
+  --tracking-display: -0.03em;
+  --tracking-display-tight: -0.045em;
+  --tracking-body: 0;
+  --tracking-button: -0.01em;
+  --tracking-mono: 0.08em;
+  --font-variation-display: 'opsz' 96, 'wdth' 100;
+  --font-variation-display-tight: 'opsz' 96, 'wdth' 90;
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --space-section: clamp(96px, 12vw, 200px);
+  --space-gutter: clamp(20px, 4.2vw, 64px);
+  --radius-control: 12px;
+  --radius-slab: 16px;
+  --radius-panel: 20px;
+  --radius-sheet: 28px;
+  --radius-pill: 9999px;
+  --radius-marketing: 28px;
+  --radius-marketing-sm: 16px;
+  --radius-marketing-3xl: 36px;
+  --radius-marketing-sm-3xl: 20px;
+  --radius-device: 2.6rem;
+  --radius-device-screen: 2.2rem;
+  --radius-browser: 1.25rem;
+  --radius-check: 6px;
+  --border-hairline: 1px solid color-mix(in srgb, #f3efe7 10%, transparent);
+  --border-standard: 1px solid color-mix(in srgb, #f3efe7 18%, transparent);
+  --border-selected: 2px solid #f9633a;
+  --border-invalid: 2px solid #ff5c7c;
+  --border-focus: 2px solid #f9633a;
+  --border-boundary: 1px solid color-mix(in srgb, #f3efe7 45%, transparent);
+  --shadow-slab: 0px 24px 60px -24px rgb(0 0 0 / 0.55);
+  --shadow-strong: 0px 32px 80px -20px rgb(0 0 0 / 0.65);
+  --shadow-sheet: 0px -24px 80px -20px rgb(0 0 0 / 0.6);
+  --shadow-device: 0px 40px 80px -20px rgb(0 0 0 / 0.6), inset 0px 1px 0px 0px rgb(243 239 231 / 0.18);
+  --shadow-screen: 0px 40px 60px -20px rgb(0 0 0 / 0.7);
+  --shadow-stack: 0px -20px 60px -30px rgb(0 0 0 / 0.7);
+  --shadow-pressed: inset 0px 2px 6px 0px rgb(0 0 0 / 0.35);
+  --shadow-bezel-shell: inset 0px 0px 0px 1px color-mix(in srgb, #f3efe7 8%, transparent);
+  --shadow-bezel-top: inset 0px 1px 0px 0px color-mix(in srgb, #f3efe7 6%, transparent);
+  --shadow-glass: inset 0px 0px 0px 1px color-mix(in srgb, #f3efe7 10%, transparent), inset 0px 1px 0px 0px color-mix(in srgb, #f3efe7 8%, transparent);
+  --shadow-card-print: 0px 8px 30px 0px rgb(0 0 0 / 0.45);
+  --blur-glass: 20px;
+  --blur-glass-heavy: 40px;
+  --blur-recede: 2px;
+  --blur-reveal: 6px;
+  --blur-none: 0px;
+  --opacity-disabled: 0.4;
+  --opacity-veil: 0.55;
+  --opacity-veil-strong: 0.6;
+  --opacity-veil-founder: 0.5;
+  --opacity-grain-dark: 0.06;
+  --opacity-grain-light: 0.16;
+  --opacity-wash-open: 0.55;
+  --opacity-wash-closed: 0.85;
+  --opacity-loader-dim: 0.25;
+  --opacity-skeleton-lo: 0.4;
+  --opacity-skeleton-hi: 0.8;
+  --opacity-word-dim: 0.16;
+  --opacity-glass-fill: 0.55;
+  --opacity-menu-fill: 0.9;
+  --z-base: 0;
+  --z-raised: 1;
+  --z-cursor-glow: 5;
+  --z-sticky: 10;
+  --z-dropdown: 30;
+  --z-app-bar: 40;
+  --z-header: 50;
+  --z-sheet: 55;
+  --z-overlay: 60;
+  --z-toast: 70;
+  --z-menu: 70;
+  --z-grain: 90;
+  --z-preloader: 100;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+  --layout-page-max: 1280px;
+  --layout-page-max-3xl: 1720px;
+  --layout-app-max: 1600px;
+  --layout-nav-max: 1120px;
+  --layout-nav-h: 72px;
+  --layout-pill-h: 56px;
+  --layout-prose-max: 68ch;
+  --layout-sidebar-w: 264px;
+  --layout-sidebar-rail-w: 64px;
+  --layout-bottom-nav-h: 64px;
+  --layout-touch-min: 44px;
+  --layout-touch-min-android: 48px;
+  --layout-form-col: 560px;
+  --layout-dialog-max: 480px;
+  --layout-drawer-w: 480px;
+  --layout-work-panel: min(84vw, 1240px);
+  --layout-work-panel-3xl: min(80vw, 1900px);
+  --gradient-scrim-hero: radial-gradient(120% 80% at 0% 100%, color-mix(in srgb, #0c0b0a 85%, transparent) 0%, color-mix(in srgb, #0c0b0a 35%, transparent) 45%, transparent 70%);
+  --gradient-glow-cursor: radial-gradient(closest-side at center, color-mix(in srgb, #f9633a 16%, transparent) 0%, color-mix(in srgb, #f9633a 5%, transparent) 45%, transparent 70%);
+  --gradient-ring-spotlight: radial-gradient(260px circle at var(--mx) var(--my), color-mix(in srgb, #f9633a 90%, transparent) 0%, transparent 65%);
+  --gradient-ring-spotlight-inverse: radial-gradient(260px circle at var(--mx) var(--my), color-mix(in srgb, #0c0b0a 90%, transparent) 0%, transparent 65%);
+  --gradient-sheen: radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, #f3efe7 6%, transparent) 0%, transparent 60%);
+  --gradient-sheen-inverse: radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, #0c0b0a 14%, transparent) 0%, transparent 60%);
+  --gradient-portrait-fade: linear-gradient(to top, color-mix(in srgb, #0c0b0a 95%, transparent) 0%, color-mix(in srgb, #0c0b0a 35%, transparent) 45%, transparent 80%);
+  --gradient-ambience-accent: radial-gradient(70% 50% at 80% 100%, color-mix(in srgb, #f9633a 35%, transparent) 0%, transparent 70%);
+  --gradient-wash-accent: linear-gradient(135deg, color-mix(in srgb, #f9633a 22%, transparent) 0%, transparent 55%);
+  --gradient-wash-ink-reverse: linear-gradient(315deg, color-mix(in srgb, #0c0b0a 70%, transparent) 0%, transparent 60%);
+  --gradient-dots: radial-gradient(1px at center, color-mix(in srgb, #f3efe7 18%, transparent) 0%, transparent 0%);
+  --gradient-corner-fade: radial-gradient(60% 60% at 100% 0%, transparent 0%, #141311 70%);
+  --gradient-backlight-accent: radial-gradient(60% 60% at 50% 70%, color-mix(in srgb, #f9633a 32%, transparent) 0%, transparent 70%);
+  --gradient-backlight-amber: radial-gradient(60% 50% at 50% 80%, rgb(255 176 32 / 0.22) 0%, transparent 70%);
+  --gradient-og-ribbon-1: radial-gradient(closest-side at center in oklch, rgb(249 99 58 / 0.55) 0%, rgb(255 176 32 / 0.25) 55%, rgb(12 11 10 / 0) 100%);
+  --gradient-og-ribbon-2: radial-gradient(closest-side at center in oklch, rgb(255 176 32 / 0.35) 0%, rgb(12 11 10 / 0) 100%);
+  --gradient-chart-area: linear-gradient(180deg, color-mix(in srgb, #f9633a 24%, transparent) 0%, transparent 100%);
+  --gradient-chart-area-2: linear-gradient(180deg, color-mix(in srgb, #7db3ff 20%, transparent) 0%, transparent 100%);
+  --gradient-shimmer: linear-gradient(100deg, transparent 35%, color-mix(in srgb, #f3efe7 6%, transparent) 50%, transparent 65%);
+  --gradient-live-edge: linear-gradient(180deg, #f9633a 0%, #f9633a 100%);
+  --gradient-scrim-sheet: linear-gradient(180deg, rgb(12 11 10 / 0.6) 0%, rgb(12 11 10 / 0.6) 100%);
+  --dur-instant: 100ms;
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-page: 700ms;
+  --dur-slow: 500ms;
+  --dur-press: 600ms;
+  --dur-reveal: 900ms;
+  --dur-cinematic: 1200ms;
+  --dur-headline: 1400ms;
+  --dur-count: 1600ms;
+  --dur-loader-chase: 1200ms;
+  --dur-loader-spin: 2400ms;
+  --dur-live-fade: 2000ms;
+  --dur-marquee: 38000ms;
+  --dur-tooltip-delay: 400ms;
+  --dur-toast-hold: 5000ms;
+  --dur-stagger: 60ms;
+  --dur-stagger-lines: 90ms;
+  --dur-stagger-letters: 18ms;
+  --dur-stagger-mark: 70ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-linear: cubic-bezier(0, 0, 1, 1);
+  --spring-snappy: linear(0, 0.018, 0.064, 0.128, 0.201, 0.278, 0.356, 0.43, 0.501, 0.566, 0.625, 0.678, 0.726, 0.767, 0.804, 0.835, 0.862, 0.885, 0.905, 0.922, 0.936, 0.948, 0.957, 0.966, 1);
+  --spring-soft: linear(0, 0.028, 0.098, 0.193, 0.301, 0.41, 0.516, 0.614, 0.701, 0.775, 0.838, 0.889, 0.93, 0.962, 0.985, 1.002, 1.013, 1.02, 1.024, 1.025, 1.025, 1.023, 1.021, 1.018, 1);
+  --spring-glow: linear(0, 0.019, 0.069, 0.136, 0.214, 0.295, 0.377, 0.455, 0.528, 0.595, 0.656, 0.71, 0.757, 0.798, 0.833, 0.864, 0.889, 0.911, 0.928, 0.943, 0.955, 0.965, 0.973, 0.98, 1);
+  --spring-ambient: linear(0, 0.026, 0.09, 0.173, 0.264, 0.355, 0.442, 0.522, 0.594, 0.657, 0.713, 0.76, 0.801, 0.835, 0.864, 0.888, 0.908, 0.925, 0.939, 0.95, 0.96, 0.967, 0.973, 0.979, 1);
+  --spring-opacity: linear(0, 0.026, 0.09, 0.173, 0.264, 0.355, 0.442, 0.522, 0.594, 0.657, 0.713, 0.76, 0.801, 0.835, 0.864, 0.888, 0.908, 0.925, 0.939, 0.95, 0.96, 0.967, 0.973, 0.979, 1);
+  --transition-hover-color: 150ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-button-color: 500ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-press: 600ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-toggle: 300ms cubic-bezier(0.65, 0, 0.35, 1) 0ms;
+  --transition-menu-open: 300ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-menu-close: 150ms cubic-bezier(0.7, 0, 0.84, 0) 0ms;
+  --transition-dialog-in: 300ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-dialog-out: 150ms cubic-bezier(0.7, 0, 0.84, 0) 0ms;
+  --transition-sheet-in: 600ms cubic-bezier(0.2, 0, 0, 1) 0ms;
+  --transition-sheet-out: 300ms cubic-bezier(0.7, 0, 0.84, 0) 0ms;
+  --transition-reveal: 900ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-route: 700ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-toast-in: 300ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-wash: 700ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-strip: 900ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --transition-name-morph: 900ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+  --travel-sm: 8px;
+  --travel-lg: 24px;
+  --travel-route: 24px;
+  --travel-hero: 28px;
+  --travel-reveal: 40px;
+
+  /* density · comfortable (default) */
+  --control-h: 44px;
+  --control-pad-x: 16px;
+  --gap: 16px;
+  --gap-lg: 24px;
+  --row-h: 52px;
+  --body-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
+  --icon: 20px;
+
+  /* legacy aliases · design system 1.0.0 and cinq-website globals.css */
+  --ink: var(--surface-canvas);
+  --ink-2: var(--surface-primary);
+  --ink-3: var(--surface-raised);
+  --ink-4: var(--surface-bezel);
+  --ink-warm: var(--surface-warm);
+  --bone: var(--text-primary);
+  --bone-2: var(--text-secondary);
+  --bone-3: var(--text-tertiary);
+  --accent: var(--accent-fill);
+  --on-accent: var(--text-on-accent);
+  --amber: var(--color-amber);
+  --line: var(--line-hairline);
+  --line-strong: var(--line-standard);
+  --canvas: var(--surface-canvas);
+  --canvas-2: var(--surface-primary);
+  --canvas-3: var(--surface-raised);
+  --canvas-4: var(--surface-bezel);
+  --canvas-warm: var(--surface-warm);
+  --text: var(--text-primary);
+  --text-2: var(--text-secondary);
+  --text-3: var(--text-tertiary);
+  --focus-ring: var(--accent-ring);
+  --device: var(--surface-device);
+  --device-screen: var(--surface-device-screen);
+  --app-canvas: var(--surface-canvas);
+  --app-surface: var(--surface-primary);
+  --app-raised: var(--surface-raised);
+  --app-sunken: var(--surface-sunken);
+  --app-inverse: var(--surface-inverse);
+  --app-on-inverse: var(--text-inverse);
+  --positive: var(--feedback-success-solid);
+  --positive-text: var(--feedback-success-text);
+  --positive-soft: var(--feedback-success-bg);
+  --on-positive: var(--feedback-success-on-solid);
+  --negative: var(--feedback-danger-solid);
+  --negative-text: var(--feedback-danger-text);
+  --negative-soft: var(--feedback-danger-bg);
+  --on-negative: var(--feedback-danger-on-solid);
+  --attention: var(--feedback-warning-solid);
+  --attention-text: var(--feedback-warning-text);
+  --attention-soft: var(--feedback-warning-bg);
+  --on-attention: var(--feedback-warning-on-solid);
+  --info: var(--feedback-info-solid);
+  --info-text: var(--feedback-info-text);
+  --info-soft: var(--feedback-info-bg);
+  --on-info: var(--feedback-info-on-solid);
+  --radius: var(--radius-marketing);
+  --radius-sm: var(--radius-marketing-sm);
+  --pad: var(--space-gutter);
+  --nav-h: var(--layout-nav-h);
+  --nav-max: var(--layout-nav-max);
+  --page-max: var(--layout-page-max);
+  --app-max: var(--layout-app-max);
+  --prose-max: var(--layout-prose-max);
+  --sidebar-w: var(--layout-sidebar-w);
+  --bottom-nav-h: var(--layout-bottom-nav-h);
+  --touch-min: var(--layout-touch-min);
+  --ease-io: var(--ease-in-out);
+  --stagger: var(--dur-stagger);
+  --shadow-bezel: var(--shadow-bezel-shell);
+  --text-display: var(--font-size-display-l);
+  --text-hero: var(--font-size-display-m);
+  --text-title: var(--font-size-display-s);
+  --text-lead: var(--font-size-body-l);
+  --text-body: var(--font-size-body);
+  --text-label: var(--font-size-body-s);
+  --text-kicker: var(--font-size-overline);
+  --text-eyebrow: var(--font-size-overline);
+  --text-numeral: var(--font-size-numeric);
+  --text-nav: var(--font-size-nav);
+  --text-bottom-nav: var(--font-size-bottom-nav);
+  --weight-regular: var(--font-weight-regular);
+  --weight-medium: var(--font-weight-medium);
+  --weight-display: var(--font-weight-display);
+  --weight-display-tight: var(--font-weight-display-tight);
+}
+
+[data-density="compact"] {
+  --control-h: 36px;
+  --control-pad-x: 12px;
+  --gap: 12px;
+  --gap-lg: 16px;
+  --row-h: 40px;
+  --body-size: 0.9375rem;
+  --icon: 18px;
+}
+[data-density="dense"] {
+  --control-h: 32px;
+  --control-pad-x: 10px;
+  --gap: 8px;
+  --gap-lg: 12px;
+  --row-h: 32px;
+  --body-size: 0.875rem;
+  --icon: 16px;
+}
+[data-density="touch"],
+[data-input="touch"] {
+  --control-h: 56px;
+  --control-pad-x: 20px;
+  --gap: 16px;
+  --gap-lg: 24px;
+  --row-h: 64px;
+  --body-size: 1.0625rem;
+  --icon: 24px;
+}
+
+html.light {
+  color-scheme: light;
+  --surface-canvas: #efe9dd;
+  --surface-primary: #e6dfd1;
+  --surface-raised: #dcd4c4;
+  --surface-overlay: #ffffff;
+  --surface-sunken: #e6dfd1;
+  --surface-input: #ffffff;
+  --surface-inverse: #14120f;
+  --surface-bezel: #c9c0ae;
+  --surface-warm: #efe3d3;
+  --surface-scrim: rgb(20 18 15 / 0.45);
+  --text-primary: #14120f;
+  --text-secondary: #5a554d;
+  --text-tertiary: #7a7368;
+  --text-inverse: #efe9dd;
+  --text-placeholder: #7a7368;
+  --text-link: #9e2d0b;
+  --accent-fill: #ef5a2f;
+  --accent-hover: #f97048;
+  --accent-active: #dc4318;
+  --accent-text: #9e2d0b;
+  --accent-ring: #9e2d0b;
+  --accent-soft: color-mix(in srgb, #ef5a2f 12%, transparent);
+  --accent-wash: color-mix(in srgb, #ef5a2f 18%, transparent);
+  --line-hairline: rgb(20 18 15 / 0.1);
+  --line-standard: rgb(20 18 15 / 0.2);
+  --line-strong: rgb(20 18 15 / 0.4);
+  --line-selected: #9e2d0b;
+  --line-boundary: rgb(20 18 15 / 0.5);
+  --interaction-hover: rgb(20 18 15 / 0.05);
+  --interaction-pressed: rgb(20 18 15 / 0.09);
+  --interaction-selected: color-mix(in srgb, #ef5a2f 12%, transparent);
+  --interaction-focus: #9e2d0b;
+  --feedback-success-solid: #14613b;
+  --feedback-success-on-solid: #efe9dd;
+  --feedback-success-text: #14613b;
+  --feedback-success-icon: #14613b;
+  --feedback-success-bg: color-mix(in srgb, #14613b 12%, transparent);
+  --feedback-success-border: color-mix(in srgb, #14613b 40%, transparent);
+  --feedback-warning-on-solid: #14120f;
+  --feedback-warning-text: #7a5600;
+  --feedback-warning-icon: #7a5600;
+  --feedback-warning-bg: color-mix(in srgb, #a56f00 14%, transparent);
+  --feedback-warning-border: color-mix(in srgb, #a56f00 40%, transparent);
+  --feedback-danger-solid: #a51c35;
+  --feedback-danger-on-solid: #efe9dd;
+  --feedback-danger-text: #a51c35;
+  --feedback-danger-icon: #a51c35;
+  --feedback-danger-bg: color-mix(in srgb, #a51c35 12%, transparent);
+  --feedback-danger-border: color-mix(in srgb, #a51c35 40%, transparent);
+  --feedback-info-solid: #174c9c;
+  --feedback-info-on-solid: #efe9dd;
+  --feedback-info-text: #174c9c;
+  --feedback-info-icon: #174c9c;
+  --feedback-info-bg: color-mix(in srgb, #174c9c 12%, transparent);
+  --feedback-info-border: color-mix(in srgb, #174c9c 40%, transparent);
+  --chart-1: #e8521f;
+  --chart-2: #174c9c;
+  --chart-3: #14613b;
+  --chart-4: #a56f00;
+  --chart-5: #7b3fd1;
+  --chart-6: #5a554d;
+  --chart-grid: rgb(20 18 15 / 0.08);
+  --chart-axis-text: #5a554d;
+  --shadow-slab: 0px 24px 60px -24px rgb(20 18 15 / 0.25);
+  --shadow-strong: 0px 32px 80px -20px rgb(20 18 15 / 0.3);
+  --shadow-sheet: 0px -24px 80px -20px rgb(20 18 15 / 0.25);
+  --shadow-device: 0px 40px 80px -20px rgb(0 0 0 / 0.35), inset 0px 1px 0px 0px rgb(243 239 231 / 0.18);
+  --shadow-screen: 0px 40px 60px -20px rgb(20 18 15 / 0.35);
+  --shadow-stack: 0px -20px 60px -30px rgb(20 18 15 / 0.3);
+  --shadow-pressed: inset 0px 2px 6px 0px rgb(20 18 15 / 0.15);
+  --shadow-bezel-shell: inset 0px 0px 0px 1px color-mix(in srgb, #14120f 12%, transparent);
+  --shadow-bezel-top: inset 0px 1px 0px 0px color-mix(in srgb, #14120f 6%, transparent);
+  --shadow-glass: inset 0px 0px 0px 1px color-mix(in srgb, #14120f 10%, transparent), inset 0px 1px 0px 0px color-mix(in srgb, #14120f 8%, transparent);
+}
+
+html.contrast {
+  --text-secondary: #f3efe7;
+  --text-tertiary: #aca69b;
+  --accent-text: #fa9b81;
+  --line-hairline: color-mix(in srgb, #f3efe7 30%, transparent);
+  --line-standard: color-mix(in srgb, #f3efe7 45%, transparent);
+  --line-boundary: color-mix(in srgb, #f3efe7 70%, transparent);
+}
+
+/* Large displays: the marketing radii grow one notch (canonical, 19 Sep). */
+@media (min-width: 1920px) {
+  :root {
+    --radius-marketing: var(--radius-marketing-3xl);
+    --radius-marketing-sm: var(--radius-marketing-sm-3xl);
+    --layout-page-max: var(--layout-page-max-3xl);
+  }
+}
+
+/* Reduced motion: every duration collapses, every travel is zero. Scroll
+   and pointer effects must also not mount; see motion.md. The in-app
+   setting (html[data-motion="reduced"]) is honoured below the media query. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant: 0.001ms;
+    --dur-fast: 0.001ms;
+    --dur-base: 0.001ms;
+    --dur-page: 0.001ms;
+    --dur-slow: 0.001ms;
+    --dur-press: 0.001ms;
+    --dur-reveal: 0.001ms;
+    --dur-cinematic: 0.001ms;
+    --dur-headline: 0.001ms;
+    --dur-count: 0.001ms;
+    --dur-loader-chase: 0.001ms;
+    --dur-loader-spin: 0.001ms;
+    --dur-live-fade: 0.001ms;
+    --dur-marquee: 0.001ms;
+    --dur-stagger: 0.001ms;
+    --dur-stagger-lines: 0.001ms;
+    --dur-stagger-letters: 0.001ms;
+    --dur-stagger-mark: 0.001ms;
+    --travel-sm: 0px;
+    --travel-lg: 0px;
+    --travel-route: 0px;
+    --travel-hero: 0px;
+    --travel-reveal: 0px;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html[data-motion="reduced"] {
+  --dur-instant: 0.001ms;
+  --dur-fast: 0.001ms;
+  --dur-base: 0.001ms;
+  --dur-page: 0.001ms;
+  --dur-slow: 0.001ms;
+  --dur-press: 0.001ms;
+  --dur-reveal: 0.001ms;
+  --dur-cinematic: 0.001ms;
+  --dur-headline: 0.001ms;
+  --dur-count: 0.001ms;
+  --dur-loader-chase: 0.001ms;
+  --dur-loader-spin: 0.001ms;
+  --dur-live-fade: 0.001ms;
+  --dur-marquee: 0.001ms;
+  --dur-stagger: 0.001ms;
+  --dur-stagger-lines: 0.001ms;
+  --dur-stagger-letters: 0.001ms;
+  --dur-stagger-mark: 0.001ms;
+  --travel-sm: 0px;
+  --travel-lg: 0px;
+  --travel-route: 0px;
+  --travel-hero: 0px;
+  --travel-reveal: 0px;
+}
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Reduced transparency: glass becomes a solid surface. */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --blur-glass: 0px;
+    --blur-glass-heavy: 0px;
+    --opacity-glass-fill: 1;
+    --opacity-menu-fill: 1;
+  }
+}
+
+/* Forced colours: let the OS paint; keep borders so controls survive. */
+@media (forced-colors: active) {
+  :root {
+    --line-hairline: CanvasText;
+    --line-standard: CanvasText;
+    --accent-ring: Highlight;
+  }
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
+html {
+  background: var(--surface-canvas);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--surface-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection {
+  background: var(--accent-fill);
+  color: var(--text-on-accent);
+}
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent-ring);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ── Type roles ───────────────────────────────────────────────────────── */
+@layer components {
+.t-display-l {
+  font-family: var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.75rem, 6.6vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-variation-settings: var(--font-variation-display);
+}
+.t-display-m {
+  font-family: var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.25rem, 5.2vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-variation-settings: var(--font-variation-display);
+}
+.t-display-s {
+  font-family: var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.5rem, 2.6vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-variation-settings: var(--font-variation-display);
+}
+.t-h1 {
+  font-family: var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.75rem, 2.2vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-variation-settings: var(--font-variation-display);
+}
+.t-h2 {
+  font-family: var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-variation-settings: var(--font-variation-display);
+}
+.t-h3 {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.t-h4 {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.t-h5 {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.t-h6 {
+  font-family: var(--font-geist-mono, 'Geist Mono'), ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.t-body-l {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.0625rem, 1.35vw, 1.375rem);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+.t-body {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+.t-body-s {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.t-caption {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.t-overline {
+  font-family: var(--font-geist-mono, 'Geist Mono'), ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.t-code {
+  font-family: var(--font-geist-mono, 'Geist Mono'), ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+.t-badge {
+  font-family: var(--font-geist-mono, 'Geist Mono'), ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.t-numeric {
+  font-family: var(--font-bricolage, 'Bricolage Grotesque'), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2rem, 3.4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-variation-settings: var(--font-variation-display-tight);
+  font-variant-numeric: tabular-nums;
+}
+.t-button {
+  font-family: var(--font-geist, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.t-display-l, .t-display-m, .t-display-s, .t-h1, .t-h2 {
+  font-variation-settings: var(--font-variation-display);
+  text-wrap: balance;
+}
+.t-body, .t-body-l, .t-body-s { text-wrap: pretty; }
+/* the site's short names */
+.font-display { font-family: var(--font-display); font-variation-settings: var(--font-variation-display); font-weight: var(--font-weight-display); letter-spacing: var(--tracking-display); line-height: var(--leading-display); }
+.font-display-tight { font-family: var(--font-display); font-variation-settings: var(--font-variation-display-tight); font-weight: var(--font-weight-display-tight); letter-spacing: var(--tracking-display-tight); line-height: 0.9; }
+.t-hero { font-size: var(--font-size-display-l); }
+.t-h3 { font-size: var(--font-size-display-s); }
+.t-lead { font-size: var(--font-size-body-l); line-height: var(--leading-lead); }
+.t-small { font-size: var(--font-size-body-s); line-height: 1.5; }
+.t-mono { font-family: var(--font-mono); font-size: var(--font-size-overline); letter-spacing: var(--tracking-mono); text-transform: uppercase; }
+}
