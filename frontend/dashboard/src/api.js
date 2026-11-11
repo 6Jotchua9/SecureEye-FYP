@@ -1,3 +1,5 @@
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+
 const TOKEN_KEY = "gateway_admin_jwt";
 const USER_KEY = "gateway_admin_user";
 
@@ -89,7 +91,7 @@ function handleAuthFailure(response, message) {
 }
 
 export async function apiLogin(username, password) {
-  const response = await fetch("/auth/login", {
+  const response = await fetch(`${API_BASE_URL}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
@@ -101,7 +103,7 @@ export async function apiLogin(username, password) {
 }
 
 async function adminFetch(url, options = {}) {
-  const response = await fetch(url, {
+  const response = await fetch(`${API_BASE_URL}${url}`, {
     ...options,
     headers: { ...authHeaders(), ...(options.headers || {}) },
   });
