@@ -1,4 +1,27 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "").trim().replace(/\/+$/, "");
+
+async function apiFetch(path, options = {}) {
+  const url = `${API_BASE_URL}${path}`;
+  const method = options.method || "GET";
+  let response;
+  try {
+    response = await fetch(url, {
+      ...options,
+      headers: { "ngrok-skip-browser-warning": "true", ...(options.headers || {}) },
+    });
+  } catch {
+    // Never log request headers, tokens, passwords or response bodies.
+    console.error("[SecureEye API] Network request failed", { method, url });
+    throw new Error("Cannot reach the backend. Check the ngrok tunnel, VITE_API_BASE_URL and backend CORS configuration, then retry.");
+  }
+  if ((response.headers.get("Content-Type") || "").includes("text/html")) {
+    console.error("[SecureEye API] Expected API response, received HTML", {
+      method, url, status: response.status,
+    });
+    throw new Error("The backend returned an HTML page. Check that VITE_API_BASE_URL points to the active backend tunnel, not the frontend.");
+  }
+  return response;
+}
 
 const TOKEN_KEY = "gateway_admin_jwt";
 const USER_KEY = "gateway_admin_user";
@@ -91,7 +114,7 @@ function handleAuthFailure(response, message) {
 }
 
 export async function apiLogin(username, password) {
-  const response = await fetch(`${API_BASE_URL}/auth/login`, {
+  const response = await apiFetch("/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
@@ -103,12 +126,15 @@ export async function apiLogin(username, password) {
 }
 
 async function adminFetch(url, options = {}) {
-  const response = await fetch(`${API_BASE_URL}${url}`, {
+  const response = await apiFetch(url, {
     ...options,
     headers: { ...authHeaders(), ...(options.headers || {}) },
   });
   if (!response.ok) {
     const message = handleAuthFailure(response, await parseError(response));
+    console.error("[SecureEye API] Admin request rejected", {
+      method: options.method || "GET", path: url.split("?")[0], status: response.status,
+    });
     throw new Error(message);
   }
   return response;
