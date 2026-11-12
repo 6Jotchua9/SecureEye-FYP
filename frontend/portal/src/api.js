@@ -1,3 +1,17 @@
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "http://localhost:5000")
+  .trim()
+  .replace(/\/+$/, "");
+
+function portalFetch(path, options = {}) {
+  return fetch(`${API_BASE_URL}${path}`, {
+    ...options,
+    headers: {
+      "ngrok-skip-browser-warning": "true",
+      ...(options.headers || {}),
+    },
+  });
+}
+
 const TOKEN_KEY = "gateway_jwt";
 const USER_KEY = "gateway_user";
 
@@ -70,7 +84,7 @@ function triggerBrowserDownload(blob, filename) {
 }
 
 export async function apiLogin(username, password) {
-  const response = await fetch("/auth/login", {
+  const response = await portalFetch("/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
@@ -85,7 +99,7 @@ export async function apiUpload(file) {
   const token = getToken();
   const form = new FormData();
   form.append("file", file);
-  const response = await fetch("/portal/upload", {
+  const response = await portalFetch("/portal/upload", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
     body: form,
@@ -98,7 +112,7 @@ export async function apiUpload(file) {
 
 export async function apiListFiles() {
   const token = getToken();
-  const response = await fetch("/portal/files", {
+  const response = await portalFetch("/portal/files", {
     headers: { Authorization: `Bearer ${token}` },
   });
   if (!response.ok) {
@@ -109,7 +123,7 @@ export async function apiListFiles() {
 
 export async function apiDownload(fileId, filename) {
   const token = getToken();
-  const response = await fetch(`/portal/download/${fileId}`, {
+  const response = await portalFetch(`/portal/download/${fileId}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   if (!response.ok) {
@@ -121,7 +135,7 @@ export async function apiDownload(fileId, filename) {
 
 export async function apiRequestDecryption(fileId, filename) {
   const token = getToken();
-  const response = await fetch(`/portal/files/${fileId}/request-decryption`, {
+  const response = await portalFetch(`/portal/files/${fileId}/request-decryption`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
